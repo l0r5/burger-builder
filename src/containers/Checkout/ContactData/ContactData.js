@@ -54,7 +54,8 @@ class ContactData extends Component {
                 elementConfig: {
                     options: [
                         {value: 'fastest', displayValue: 'Fastest'},
-                        {value: 'cheapest', displayValue: 'Cheapest'}]
+                        {value: 'cheapest', displayValue: 'Cheapest'}
+                    ]
                 },
                 value: ''
             },
@@ -82,7 +83,7 @@ class ContactData extends Component {
 
     render() {
         const formElementsArray = [];
-        for(let key in this.state.orderForm) {
+        for (let key in this.state.orderForm) {
             formElementsArray.push({
                 id: key,
                 config: this.state.orderForm[key]
@@ -90,7 +91,7 @@ class ContactData extends Component {
         }
         let form = (
             <form>
-                {formElementsArray.map(formElement =>(
+                {formElementsArray.map(formElement => (
                     <Input
                         key={formElement.id}
                         elementType={formElement.config.elementType}
